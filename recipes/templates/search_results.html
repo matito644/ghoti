@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de Búsqueda</title>
+</head>
+<body>
+
+<ul>
+    {% for recipe in object_list %}
+    {{ recipe.name }}
+    {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+.navbar-sup{
+    z-index: 5;
+    position: fixed;
+    width: 100% ;
+    background: #C05E51;
+    height: 75px;
+    top: 0;
+}
+
+.iconSupIzq{
+    width: 100px;
+    height: 75px;
+    font-weight: bold;
+    padding-top: 1px;
+    padding-left: 39px;
+    font-size: 50px;
+    float: left;
+    clear: both;
+    color: #D8D5C4;
+    text-decoration-color: rgba(0,0,0,0);
+    transition: color .5s ease;
+}
+
+.iconSupIzq:hover{
+    color: #F5C265;
+}
+
+.iconSupDer {
+    height: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.button-navbarSup{
+    background-image: linear-gradient(to right, #5A6E5A, #D8D5C4);
+    background-size: 600%;
+    transition: background-position .5s ease;
+    color: #D8D5C4;
+
+    text-decoration-color: rgba(0,0,0,0);
+    height: 40px;
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 8px;
+
+    border-radius: 25px;
+
+    float: right;
+
+    font-weight: bold;
+}
+
+.button-navbarSup:hover{
+    background-position: right;
+    color: #5A6E5A !important;
+}
+
+.button-navbarSup2{
+    background-image: linear-gradient(to right, #5A6E5A, #D8D5C4);
+    background-size: 600%;
+    transition: background-position .5s ease;
+    color: #E0E0E0;
+
+    text-decoration-color: rgba(0,0,0,0);
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 8px;
+
+    border-radius: 25px;
+
+    float: right;
+
+    font-weight: bold;
+
+}
+
+.button-navbarSup2:hover{
+    background-position: right;
+    color: #5A6E5A !important;
+}
+
+.navbar-izq {
+    z-index: 10;
+    top: 0;
+    float: left;
+    position: fixed;
+    border-right: #06253b;
+    border-right-width: 10px;
+
+    background-image: linear-gradient(to right, #5A6E5A, #D8D5C4);
+    background-size: 1000%;
+
+    width: 250px;
+    height: 100%;
+}
+
+.button-navbarIzq{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-decoration: none;
+    
+    color: #E0E0E0;
+    padding: 20px 20px;
+    width: 250px;
+    
+    float: left;
+    transition: all .5s ease;
+}
+
+.button-navbarIzq:hover{
+    background: #D8D5C4;
+    color: #5A6E5A !important;
+}
+
+
+

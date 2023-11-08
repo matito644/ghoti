@@ -1,0 +1,132 @@
+
+
+body{
+    background-image: url("../img/fondo.jpg");
+}
+
+/* REGISTRO */
+
+.init{
+    position: absolute;
+    color: #023047;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    font-size: 50px;
+    text-decoration-color: rgba(0,0,0,0);
+    text-align: center;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-weight: bold;
+    transition: color .5s ease, font-size .5s ease-in;
+}
+
+.init:hover{
+    color: #FB8500;
+    font-size: 70px;
+}
+
+
+.bloqueRegLog{
+    top: 150px;
+    border-radius: 25px;
+    padding: 25px;
+    position: absolute;
+    background: #6c98af;
+    color: #023047;
+    height: 400px;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+}
+
+
+.bloqueRegLog input{
+    float: left;
+    width: 400px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: #7d9fb0;
+    border-color: rgba(6, 37, 59, 0.27);
+    margin-bottom: 1rem;
+}
+.bloqueRegLog input:focus{
+    border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    outline: 0 none;
+}
+
+.bloqueRegLog p{
+    color: #06253b;
+    font-weight: bold;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    margin: 0;
+}
+
+.bloqueRegLog h1{
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+
+.bloqueRegLog .button{
+    position: relative;
+    background-image: linear-gradient(to right,#219EBC,#FFB703);
+    background-size: 600%;
+    transition: background-position .5s ease;
+    color: #E0E0E0;
+
+    text-decoration-color: rgba(0,0,0,0);
+    height: 40px;
+    width: 100px;
+    padding-top: 8px;
+    left: -58px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.button:hover{
+    background-position: right;
+    color: #2E35B3 !important;
+}
+
+.UbcButton {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    bottom: 30px;
+}
+
+.parteInferior{
+    width: 100%;
+    position: relative;
+}
+
+.wrapper {
+    display: inline-block;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-right: 90px;
+}
+
+ .wrapperLog {
+     display: inline-block;
+     flex-direction: row;
+     margin-top: 70px;
+     margin-right: 90px;
+ }
+
+
+/* LOGIN */
+
+.bloqueRegLog .ingresar {
+    top: 10px;
+    position: relative;
+    left: 50%;
+}
+
+.bloqueRegLog .register{
+    top: 50px;
+    position: relative;
+}

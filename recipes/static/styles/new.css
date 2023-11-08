@@ -1,0 +1,64 @@
+.Title-new {
+    padding: 30px 30px 30px 25%;
+}
+
+.Title-new h3{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.block{
+    font-weight: bold;
+}
+
+.left-block {
+    float: left;
+    width: 48%;
+    height: 300px;
+}
+
+.right-block{
+    float: right;
+    width: 48%;
+    height: 300px;
+}
+
+.left-block .name{
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+input[type=text],textarea{
+    width: 100%;
+    background: rgba(90, 110, 90, 0.5);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    height: 20%;
+    color: #D8D5C4;
+
+    padding: 0 20px;
+    display: inline-block;
+}
+
+.right-block {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.right-block textarea{
+    height: 90%;
+}
+
+.block .button{
+    margin-top: 10px;
+    background: #C05E51;
+    transition: all .5s ease;
+
+    color: #E0E0E0;
+    margin-bottom: 1px;
+}
+
+.block .button:hover{
+    color: #5A6E5A;
+    background: #E0E0E0;
+    background-position: right;
+}

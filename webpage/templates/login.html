@@ -1,0 +1,29 @@
+{% load static %}
+{% block specific_css_files %}
+    <link rel="stylesheet" href="{% static 'styles/registerAndLogin.css' %}">
+{% endblock %}
+
+{% block page_content %}
+    <div class="init">
+        <a class="init" href="/">Ghoti</a>
+    </div>
+    <div class="bloqueRegLog">
+        <h1>Inicio de sesión</h1>
+        <form method="post">
+          {% csrf_token %}
+          <label>{{form.label}}</label>
+          <p>Usuario:</p>
+          {{form.username}}
+          <label>{{form.label}}</label>
+          <p>Contraseña:</p>
+          {{form.password}}
+          <br>
+            <div class="ingresar"><input class="button" type="submit" value="Login"></div>
+        </form>
+        <div class="wrapperLog">
+          <p>¿No tienes una cuenta?<br><a href="{% url 'register' %}">Regístrate</a></p></div>
+    </div>
+{% endblock %}
+
+{% block scripts%}
+{% endblock %}

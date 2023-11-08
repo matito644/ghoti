@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}Recetas{% endblock %}
+
+{% block specific_css_files %}
+<link rel="stylesheet" href="{% static 'styles/display.css' %}">
+{% endblock %}
+
+{% block page_content %}
+<div class="title-block">
+    <h3>Recetas</h3>
+</div>
+
+<div class="row justify-center text-center">
+  <form method="get" class="search-form">
+    <input type="text" name="search-area" class="search-input" placeholder="Ingrese aquí su búsqueda..." value="{{search_input}}">
+    <input class="button" style="margin-left: 5px;" type="submit" value="Buscar">
+  </form>
+</div>
+<div class="recipes-block">
+  {% for recipe in recipes %}
+      <a class="recipe" href="{% url 'recipe' recipe.id %}">
+        <div class="recipe-image" style="background-image: url('{% if recipe.image %}{{ recipe.image.url }}{% else %}{% static 'img/default.png'%}{% endif %}')"></div>
+        <div class="recipe-info">
+            <h1 class="recipe-name">{{ recipe.name }}</h1>
+            <p>Por: {{ recipe.user.username }}</p>
+        </div>
+      </a>
+
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts%}
+{% endblock %}

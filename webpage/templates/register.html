@@ -1,0 +1,45 @@
+{% load static %}
+
+
+{% block specific_css_files %}
+<link rel="stylesheet" href="{% static 'styles/registerAndLogin.css' %}">
+{% endblock %}
+
+{% block page_content %}
+<div class="backgroundRegisterAndLogin">
+    <div class="init">
+        <a class="init" href="/">Ghoti</a>
+    </div>
+    <div class="bloqueRegLog">
+        <h1 style="text-align: center">Registro de usuario</h1>
+        <form class="formRegister" method="post">
+          {% csrf_token %}
+
+          <p>Nombre de usuario</p>
+          <label class="sol-name"></label>
+          {{form.username}}
+
+          <p>Contraseña</p>
+          <label class="sol password1"></label>
+          {{form.password1}}
+
+          <p>Confirme contraseña</p>
+          <label class="sol password1"></label>
+          {{form.password2}}
+          <br>
+          <div class="UbcButton">
+              <input class="button" type="submit" value="Registrarse" style="margin-top:25px;float:contour">
+          </div>
+        </form>
+        <div class="wrapper">
+            <p>¿Ya tienes una cuenta?</p>
+            <p><a href="{% url 'login' %}">Inicia sesión</a></p>
+        </div>
+
+
+    </div>
+</div>ඞ
+{% endblock %}
+
+{% block scripts%}
+{% endblock %}

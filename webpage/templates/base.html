@@ -1,0 +1,64 @@
+<!-- Load the tag library -->
+{% load bootstrap5 %}
+
+<!-- Load CSS and JavaScript -->
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!-- Display django.contrib.messages as Bootstrap alerts -->
+{% bootstrap_messages %}
+
+<!-- Cargar statics para Django -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>  - Ghoti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escalar segun dispositivo -->
+  <meta charset="UTF-8"> <!-- Usar charset UTF-8 -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+
+  {% block specific_css_files %}{% endblock %}
+</head>
+
+<body>
+
+    <div class="navbar-izq" id = "navbar-izq">
+    <a class="iconSupIzq" href="/">Ghoti</a>
+    <div class="buttonsInIzq">
+      <a class="button-navbarIzq" id = "button-navbarIzq"  href="/">  Home</a>
+      <a class="button-navbarIzq" id = "button-navbarIzq" href="/recipes">Recetas</a>
+      {% if request.user.is_authenticated %}
+          <a class="button-navbarIzq" href="/recipes/new">  Agregar receta</a>
+          <a class="button-navbarIzq" href="{% url 'created-recipes' %}">Recetas Creadas</a>
+          <a class="button-navbarIzq" href="{% url 'saved-recipes' %}">Recetas Guardadas</a>
+      {% endif %}
+    </div>
+
+    </div>
+
+  <main>
+    <div class="navbar-sup">
+        <div class="iconSupDer">
+          {% if request.user.is_authenticated %}
+          <p class="button" >Hola, {{request.user.username|title}}</p>
+          <a class="button" href="/logout">Salir</a>
+          {% else %}
+          <a class="button" href="/login">Ingresar</a>
+          <a class="button" href="/register">Registrarse</a>
+          {% endif %}
+        </div>
+    </div>
+    <div class="main-contenido">{% block page_content %}{% endblock %}</div>
+  </main>
+
+  {% block scripts %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}Editar Receta{% endblock %}
+
+{% block specific_css_files %}
+<link rel="stylesheet" href="{% static 'styles/new.css' %}">
+{% endblock %}
+
+{% block page_content %}
+<div class="title-block">
+    <h3>Agregar Receta</h3>
+</div>
+
+<form class="block" method="post" action="/recipes/edit/{{recipe_id}}/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="left-block">
+        <div class="name">
+            <p  >* Título receta:</p>
+            {{ form.name }}
+        </div>
+        <div class="field-wrapper">
+            <span>Foto:</span>
+            {{ form.image }}
+        </div>
+    </div>
+    <div class="right-block">
+        <div class="ingredients">
+            <p>* Ingredientes:</p>
+            {{ form.ingredients }}
+        </div>
+    </div>
+    <div >
+        <p> *Instrucciones:</p>
+        {{ form.instructions }}
+        <input class="button" type="submit" value="Guardar Cambios"/>
+    </div>
+
+</form>
+{% endblock %}
+
+
+{% block scripts%}
+{% endblock %}

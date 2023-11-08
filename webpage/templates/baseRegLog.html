@@ -1,0 +1,22 @@
+{%load static%}
+
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="{% static 'styles/registerAndLogin.css' %}">
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Login and Register </title>
+</head>
+<body>
+    <div class="backgroundRegisterAndLogin">
+        {% block page_content %}
+
+        {% endblock %}
+    </div>
+</body>
+
+{% block scripts%}
+{% endblock %}
+</html>

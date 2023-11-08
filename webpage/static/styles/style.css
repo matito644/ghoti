@@ -1,0 +1,40 @@
+body {
+    background-image: url("../img/fondo.jpg");
+    background-position: left;
+}
+
+.button {
+    background: #5A6E5A;
+    color: #D8D5C4;
+    border: none;
+    display: inline-block;
+    transition: .5s ease;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius:30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.button:hover {
+    color: #5A6E5A;
+    background: #D8D5C4;
+}
+
+.title-block {
+    margin-bottom: 3vw;
+}
+
+main .main-contenido{
+    padding: 25px;
+    border-radius: 10px;
+    display: block;
+    margin-top: 90px ;
+    margin-left: 280px;
+    margin-right: 18px;
+    background: rgba(224, 224, 224, 0.45);
+}
+
+
